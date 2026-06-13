@@ -1,0 +1,261 @@
+.product-detail{
+    width: 80%;
+    margin: 0px auto;
+    padding: 100px 0px 40px 0px;
+}
+
+.product-wrapper{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.product-image-box{
+    flex: 1;
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.product-image-box img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    transition: 0.3s ease;
+}
+.product-info{
+    flex: 1;
+}
+
+.product-info p{
+    color: #6b7280;
+    margin: 10px 0;
+}
+.price-box{
+    margin: 15px 0;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: #9ca3af;
+    margin-right: 10px;
+}
+
+.new-price{
+    font-size: 22px;
+    color: #f59e0b;
+    font-weight: bold;
+}
+.size-box h4{
+    margin-bottom: 10px;
+}
+
+.sizes span{
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.size-item{
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.size-item:hover{
+    background: #111827;
+    color: white;
+}
+
+.size-item.active{
+    background: #111827;
+    color: white;
+}
+
+.add-cart-btn{
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #f59e0b;
+    border: none;
+    color: #111827;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover{
+    background: #111827;
+    color: white;
+}
+
+
+.reviews-section{
+    width: 80%;
+    margin: 30px auto;
+}
+
+.review-content{
+    display: flex;
+    gap: 30px;
+}
+/* ========================= */
+/* Rating Summary */
+/* ========================= */
+
+.rating-summary{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    background: #f9fafb;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+    width: 60%;
+}
+
+.avg-rating h1{
+    font-size: 50px;
+    color: #f59e0b;
+    margin: 0;
+}
+
+.stars{
+    color: #f59e0b;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/* ========================= */
+/* Rating Bars */
+/* ========================= */
+
+.rating-bars{
+    flex: 1;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.line{
+    width: 200px;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.line div{
+    height: 100%;
+    background: #f59e0b;
+    border-radius: 10px;
+}
+
+/* ========================= */
+/* Review Cards */
+/* ========================= */
+
+.review-list{
+    display: grid;
+    gap: 15px;
+    width: 40%;
+}
+
+.review-card{
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    transition: 0.3s;
+}
+
+.review-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.review-card h4{
+    margin: 0;
+    color: #111827;
+    font-size: 1.2rem;
+}
+
+.review-card p{
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+
+/* ========================= */
+/* RELATED ITEMS */
+/* ========================= */
+.related-product{
+    background-color: #f5f3f3;    
+    padding: 40px 0px;
+}
+.related-product-content{
+    width: 80%;
+    margin: auto;
+}
+
+
+@media (max-width: 900px){
+    .product-wrapper{
+        display: block;
+    }
+    .product-info{
+        margin-top: 30px;
+    }
+    .review-content{
+        display: block;
+        gap: 30px;
+    }
+    .rating-summary,
+    .review-list{
+        width: 100%;
+    }
+}
+@media (max-width: 600px){
+    .product-detail{
+        width: 95%;
+    }
+    .product-image-box{
+        padding: 0px;
+    }
+    .product-image-box img{
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+    .reviews-section{
+        width: 95%;
+    }
+    .related-product-content{
+        width: 95%;
+    }
+}
+@media (max-width: 450px){
+    .rating-summary{
+        display: block;
+    }
+    .avg-rating{
+        display: flex;
+        align-items: center;
+    }
+}

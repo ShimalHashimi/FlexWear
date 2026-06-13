@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexWear | Fashion Cart</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--============================    
+    CONTACT SECTION
+===========================-->
+    <section id="top-contact">
+        <div class="top-contact">
+            <div class="top-contact-number">
+                <i class="fa-solid fa-phone"></i>
+                <span>(+94) 77 521 2143</span>
+            </div>
+            <div class="top-contact-email">
+                <i class="fa-solid fa-envelope"></i>
+                <span>flexwear@gmail.com</span>
+            </div>
+        </div>
+    </section>
+<!--============================    
+    NAVBAR SECTION
+===========================-->
+    <section id="navbar-section">
+        <nav class="navbar" id="main-navbar">
+            <div class="navbar-brand">
+                <div class="navbar-toggle">
+                    <i onclick="showsidenav()" class="fa-solid fa-bars nav-menu"></i> 
+                    <i onclick="hidesidenav()" class="fa-solid fa-xmark nav-close"></i>
+                </div>
+                <a class="logo" href="index.html">FlexWear.</a>
+            </div>
+            <div class="navbar-links">
+                <p class="navbar-link"><a href="index.html"><span>Home</span></a></p>
+                <p class="navbar-link"><a href="shop.html"><span>Shop</span></a></p>
+                <p class="navbar-link"><a href="deals.html"><span>Deals</span></a></p>
+                <p class="navbar-link"><a href="arrivals.html"><span>New Arrivals</span></a></p>
+                <p class="navbar-link"><a href="contact.html"><span>Contact Us</span></a></p>
+            </div>
+            <div class="nav-btn">
+                <div class="nav-login">
+                    <a href="authentication.html"><i class="fa-solid fa-circle-user"></i>
+                    <span>Sign Up</span></a>
+                </div>
+                <div class="nav-cart">
+                    <a href="cart.html"><i class="fa-solid fa-cart-arrow-down"></i>
+                    <span>Cart</span></a>
+                </div>
+            </div>
+        </nav>
+    
+        <nav class="side-navbar" id="side-navbar">
+            <div class="side-navbar-links">
+                <p class="navbar-link"><a href="#hero-section" class="smoothscroll" onclick="hidesidenav()"><span>Home</span></a></p>
+                <p class="navbar-link"><a href="#destination-section" class="smoothscroll" onclick="hidesidenav()"><span>Destination</span></a></p>
+                <p class="navbar-link"><a href="#About-section" class="smoothscroll" onclick="hidesidenav()"><span>About</span></a></p>
+                <p class="navbar-link"><a href="#testimonials-section" class="smoothscroll" onclick="hidesidenav()"><span>Testimonials</span></a></p>
+                <p class="navbar-link"><a href="#faq-section" class="smoothscroll" onclick="hidesidenav()"><span>FAQ</span></a></p>
+                <p class="navbar-link"><a href="#blog-section" class="smoothscroll" onclick="hidesidenav()"><span>Blog</span></a></p>
+            </div>
+        </nav>
+    </section>
+
+<!--============================    
+    HERO SECTION
+===========================-->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Step Into Style with <span>FlexWear</span></h1>
+            <p>Discover the latest fashion trends, premium quality products, and exclusive deals made for your lifestyle.</p>
+
+            <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+            </div>
+
+            <div class="hero-btns">
+            <button class="primary">Shop Now</button>
+            <button class="secondary">Explore</button>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/Fashion/fashion_img_01.jpg" alt="fashion">
+        </div>
+    </section>
+
+<!--============================    
+    CATEGORY SECTION
+===========================-->
+    <section class="categories">
+        <div class="category-grid">
+            <button class="scroll-btn left" onclick="scrollLeft1()">‹</button>
+            <div class="category-grid" id="categoryGrid">
+                
+            </div>
+            <button class="scroll-btn right" onclick="scrollRight1()">›</button>
+            
+        </div>
+    </section>
+
+
+<!--============================    
+    POPULAR SECTION
+===========================-->
+    <section class="popular">
+        <div class="popular-content">
+            <h1 class="Page-title" id="indexProduct">Popular Now</h1>
+            <div class="popular-cards-container" id="popularContainer">
+                
+            </div>
+        </div>
+    </section>
+
+
+<!--============================    
+    BRANDS SECTION
+===========================-->
+    <section class="brand">
+        <div class="brand-content">
+
+            <!-- Identity Card -->
+            <div class="brand-box">
+                <div class="brand-icon-wrap">
+                    <img class="brand-icon" src="images/Brands/brand-icon.png" alt="Brand Icon">
+                </div>
+                <div class="brand-tag">
+                    <span class="brand-tagline">Royal Vogue</span>
+                    <p class="brand-sub">Est. Collection</p>
+                </div>
+                <div class="brand-divider"></div>
+                <div>
+                    <div class="brand-stat-num">50+</div>
+                    <div class="brand-stat-label">Partners</div>
+                </div>
+            </div>
+
+            <!-- Right Panel -->
+            <div class="brand-right">
+                <div class="brand-header-row">
+                    <span class="brand-section-label">Featured Brands</span>
+                </div>
+
+                <div class="brand-grid" id="brandGrid">
+                    <button class="scroll-btn-brand left" onclick="scrollLeftBrand()">‹</button>
+                    <div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Sport</span>
+                            <img src="images/Brands/adidas.png" alt="Adidas">
+                            <span class="brand-item-name">Adidas</span>
+                        </div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Luxury</span>
+                            <img src="images/Brands/zara.png" alt="ZARA">
+                            <span class="brand-item-name">Zara</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Luxury</span>
+                            <img src="images/Brands/gucci.png" alt="Gucci">
+                            <span class="brand-item-name">Gucci</span>
+                        </div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Classic</span>
+                            <img src="images/Brands/ray-ban.png" alt="Ray-Ban">
+                            <span class="brand-item-name">Ray-Ban</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Sport</span>
+                            <img src="images/Brands/nike.png" alt="Nike">
+                            <span class="brand-item-name">Nike</span>
+                        </div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Luxury</span>
+                            <img src="images/Brands/versace.png" alt="Versace">
+                            <span class="brand-item-name">Versace</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Sport</span>
+                            <img src="images/Brands/hm.png" alt="H&M">
+                            <span class="brand-item-name">H&M</span>
+                        </div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Luxury</span>
+                            <img src="images/Brands/lv.png" alt="Louis Vuitton">
+                            <span class="brand-item-name">Louis Vuitton</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Sport</span>
+                            <img src="images/Brands/puma.png" alt="Puma">
+                            <span class="brand-item-name">Puma</span>
+                        </div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Fashion</span>
+                            <img src="images/Brands/Levis.png" alt="Levi’s">
+                            <span class="brand-item-name">Levi’s</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Luxury</span>
+                            <img src="images/Brands/titan.png" alt="Titan">
+                            <span class="brand-item-name">Titan</span>
+                        </div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Active</span>
+                            <img src="images/Brands/asics.png" alt="ASICS">
+                            <span class="brand-item-name">ASICS</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Fashion</span>
+                            <img src="images/Brands/armani.png" alt="Armani ">
+                            <span class="brand-item-name">Armani </span>
+                        </div>
+                        <div class="brand-item">
+                            <span class="brand-item-tag">Luxury</span>
+                            <img src="images/Brands/balenciaga.png" alt="Balenciaga">
+                            <span class="brand-item-name">Balenciaga</span>
+                        </div>
+                    </div>
+                    <button class="scroll-btn-brand right" onclick="scrollRightBrand()">›</button>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!--============================    
+    NEW ARRIVAL SECTION
+===========================-->
+    <section class="newarrivals">
+        <div class="newarrivals-content">
+            <h1 class="Page-title">New Arrivals</h1>
+            <div class="newarrivals-cards-container">
+                <!-- 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Shoes/running-shoes.jpg" alt="Running Shoes">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Training Shoes</h3>
+                        <p>Designed for running and gym workouts with maximum comfort and support.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$110.00</span>
+                            <span class="current-price">$90.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>7</span><span>8</span><span>9</span><span>10</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Men/jacket.jpg" alt="Jacket">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Street Winter Jacket</h3>
+                        <p>Modern warm jacket built for cold weather with a stylish urban look.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$130.00</span>
+                            <span class="current-price">$108.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Bags/handbag.jpg" alt="Bag">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Designer Handbag</h3>
+                        <p>Elegant premium handbag crafted for daily use and luxury fashion styling.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$85.00</span>
+                            <span class="current-price">$70.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>Free Size</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Women/dress.jpg" alt="Dress">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Elegant Party Dress</h3>
+                        <p>Beautiful fitted dress perfect for parties, events, and special occasions.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$100.00</span>
+                            <span class="current-price">$82.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Men/Hoodie-men.jpg" alt="Hoodie">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Casual Street Hoodie</h3>
+                        <p>Comfortable hoodie made with soft cotton fabric for daily streetwear fashion.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$90.00</span>
+                            <span class="current-price">$75.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Accessories/watch.jpg" alt="Watch">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Smart Digital Watch</h3>
+                        <p>Modern smart watch with stylish design and advanced digital features.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$175.00</span>
+                            <span class="current-price">$150.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>Free Size</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Men/coatsuit-men.jpg" alt="Coat Suit">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Executive Formal Suit</h3>
+                        <p>Premium suit designed for office meetings and professional formal events.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$140.00</span>
+                            <span class="current-price">$115.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Shoes/Sneakers.jpg" alt="Sneakers">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Comfort Sneakers</h3>
+                        <p>Breathable sneakers designed for walking, travel, and daily lifestyle wear.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$120.00</span>
+                            <span class="current-price">$98.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>7</span><span>8</span><span>9</span><span>10</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Accessories/sunglasses.jpg" alt="Sunglasses">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Urban Sunglasses</h3>
+                        <p>Stylish UV-protected sunglasses for a bold and modern fashion look.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$65.00</span>
+                            <span class="current-price">$52.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>Free Size</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Products/Women/jeans.jpg" alt="Jeans">
+                        <span class="offer-badge">New</span>
+                    </div>
+                    <div class="product-content">
+                        <h3>Casual Blue Jeans</h3>
+                        <p>Trendy denim jeans designed for everyday comfort and stylish wear.</p>
+                        <div class="price-section">
+                            <span class="actual-price">$95.00</span>
+                            <span class="current-price">$79.00</span>
+                        </div>
+                        <div class="sizes">
+                            <span>S</span><span>M</span><span>L</span><span>XL</span>
+                        </div>
+                        <button class="view-btn">View Product</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<!--============================    
+    BEST DEAL SECTION
+===========================-->
+
+    <section class="best-deal-section">
+        <!-- LEFT: BEST SELLERS -->
+        <div class="best-sellers">
+            <h2 class="Page-title">Best Sellers</h2>
+            <div class="mini-product">
+                <img src="images/Products/Shoes/Sneakers.jpg" alt="">
+                <div>
+                    <h4>Urban Sneakers</h4>
+                    <span>$75.00</span>
+                </div>
+            </div>
+            <div class="mini-product">
+                <img src="images/Products/Men/jacket.jpg" alt="">
+                <div>
+                    <h4>Winter Jacket</h4>
+                    <span>$88.00</span>
+                </div>
+            </div>
+            <div class="mini-product">
+                <img src="images/Products/Women/jeans.jpg" alt="">
+                <div>
+                    <h4>Slim Jeans</h4>
+                    <span>$66.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: DEAL BANNER -->
+        <div class="deal-banner">
+            <div class="deal-content">
+                <h1>MEGA DEAL</h1>
+                <h2>Up to 50% OFF</h2>
+                <p>Premium fashion collection limited time offer</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+<!--============================    
+    BOTTOM SECTION
+===========================-->
+    <section class="bottom-section">
+    <!--============================    
+        NEWSLETTER SECTION
+    ===========================-->
+        <section class="newsletter-section">
+
+            <div class="newsletter-box">
+
+                <h2>Join Our Newsletter</h2>
+                <p>Get exclusive offers, new arrivals & fashion updates</p>
+
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </div>
+
+                <span class="note">No spam. Only fashion updates.</span>
+
+            </div>
+
+        </section>
+
+
+    <!--============================    
+        FOOTER SECTION
+    ===========================-->
+        <footer class="footer-section-hero">
+            <div class="footer-container">
+                <div class="footer-box footer-box-title">
+                    <h2>FlexWear</h2>
+                    <p>Modern fashion for everyone. Style, comfort & confidence in one place.</p>
+
+                    <div class="footer-social">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-box">
+                        <h4>Quick Links</h4>
+                        <a href="index.html">Home</a>
+                        <a href="shop.html">Products</a>
+                        <a href="deals.html">Best Deals</a>
+                        <a href="arrivals.html">New Arrivals</a>
+                    </div>
+                    
+                    <div class="footer-box">
+                        <h4>Support</h4>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    
+                    <div class="footer-box">
+                        <h4>Contact</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Trincomalee, Sri Lanka</p>
+                        <p><i class="fa-solid fa-phone"></i> +94 77 521 2143</p>
+                        <p><i class="fa-solid fa-envelope"></i> flexwear@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 FlexWear. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+
+<!-- 
+1. Navbar
+2. Hero Section
+3. Categories
+4. Popular Now
+5. New Arrivals
+6. Best Sellers
+7. Deals Banner
+8. Why Choose Us
+9. Testimonials
+10. Newsletter
+11. Footer 
+-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/bc0de78847.js" crossorigin="anonymous"></script>
+    <script src="data/categoryData.js"></script>
+    <script src="data/productData.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
