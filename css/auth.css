@@ -1,0 +1,224 @@
+.auth-section {
+    display: flex;
+    padding: 0px 10%;
+}
+
+.auth-container{
+    margin: 120px auto;
+    width: 100%;
+    min-height:750px;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+/* LEFT */
+
+.auth-left{
+    position:relative;
+    background:url("images/Fashion/fashion_img_01.jpg") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(17,24,39,.8),
+        rgba(31,41,55,.85)
+    );
+}
+
+.left-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    max-width:500px;
+    padding:40px;
+}
+
+.left-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.left-content h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.left-content p{
+    line-height:1.8;
+    color:#d1d5db;
+}
+
+.features{
+    margin-top:40px;
+}
+
+.features div{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.features i{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* RIGHT */
+
+.auth-right{
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.form-toggle{
+    display:flex;
+    background:#f3f4f6;
+    padding:5px;
+    border-radius:15px;
+    margin-bottom:40px;
+}
+
+.form-toggle button{
+    flex:1;
+    border:none;
+    background:none;
+    padding:14px;
+    cursor:pointer;
+    border-radius:100px;
+    font-size:15px;
+    font-weight:600;
+}
+
+.form-toggle .active{
+    background:#111827;
+    color:white;
+}
+
+.auth-form{
+    display:none;
+}
+
+.active-form{
+    display:block;
+}
+
+.auth-form h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.auth-form p{
+    color:#6b7280;
+    margin-bottom:30px;
+}
+
+.input-group{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f9fafb;
+    border:1px solid #e5e7eb;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:18px;
+}
+
+.input-group i{
+    color:#6b7280;
+}
+
+.input-group input{
+    border:none;
+    background:none;
+    outline:none;
+    font-size:15px;
+}
+
+.form-options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.form-options a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    padding:16px;
+    border-radius:15px;
+    background:#111827;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-3px);
+}
+
+.divider{
+    text-align:center;
+    margin:30px 0;
+    color:#9ca3af;
+}
+
+.social-login{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social-login button{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#f3f4f6;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.social-login button:hover{
+    transform:translateY(-5px);
+}
+
+@media(max-width:900px){
+
+    .auth-container{
+        grid-template-columns:1fr;
+    }
+
+    .auth-left{
+        display:none;
+    }
+
+    .auth-right{
+        padding:35px;
+    }
+}

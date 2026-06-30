@@ -1,0 +1,341 @@
+.deals-hero{
+    min-height: 90vh;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    background: linear-gradient(
+        135deg,
+        #111827 0%,
+        #1f2937 50%,
+        #111827 100%
+    );
+    overflow: hidden;
+}
+
+.deals-hero-content{
+    flex: 1;
+    max-width: 600px;
+}
+
+.deals-tag{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.deals-title{
+    font-size: 48px;
+    line-height: 1.2;
+    color: white;
+}
+
+.deals-description{
+    color: #d1d5db;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.deals-stats{
+    margin-top: 30px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.stat-box{
+    min-width: 130px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.stat-box h3{
+    color: #fbbf24;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.stat-box span{
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+.deals-hero-image{
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deals-hero-image img{
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-circle{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(245, 158, 11, 0.15);
+    border-radius: 50%;
+    filter: blur(50px);
+}
+
+.circle-2{
+    width: 250px;
+    height: 250px;
+    background: rgba(59, 130, 246, 0.15);
+    top: 60%;
+    right: 0;
+}
+
+.floating-card{
+    position: absolute;
+    padding: 18px 25px;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-card i{
+    color: #fbbf24;
+    font-size: 22px;
+}
+
+.sale-card{
+    top: 15%;
+    left: 0;
+}
+
+.brand-card{
+    bottom: 20%;
+    right: 0;
+    animation-delay: 2s;
+    
+}
+
+/* BRAND SECTION */
+.brand-deals{
+    padding:60px 10%;
+    background:#f9fafb;
+}
+
+.brand-grid{
+    position: relative;
+}
+
+.brands{
+    padding: 20px 0px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory; 
+    
+    scrollbar-width: none;
+}
+
+.brands::-webkit-scrollbar{
+    display: none;
+}
+.deal-brands-card {
+    position: relative;
+    background: #fff;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    min-height: 90px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    margin: 0px 10px;
+}
+
+.deal-brands-card:hover {
+    border-color: #e2c97a;
+    transform: translateY(-6px);
+}
+
+.deal-brands-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0;
+}
+.deal-brands-card p{
+    margin-top: -15px;
+}
+.deal-brands-card span{
+    margin-top: -20px;
+}
+
+.scroll-btn-deal-brand{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.scroll-btn-deal-brand:hover{
+    background: #5f5f5f;
+    color: white;
+}
+
+.scroll-btn-deal-brand.left{
+    left: 0%;
+}
+
+.scroll-btn-deal-brand.right{
+    right: 0%;
+}
+
+
+.offer-products{
+    width: 80%;
+    margin: 10px auto;
+    padding: 30px 0px;
+}
+
+.offer-cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+@keyframes float{
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 1300px) {
+    .deals-hero{
+        min-height: 90vh;
+        padding: 100px 10% 80px 10%;
+        display: block;
+    }
+    .deals-title{
+        font-size: 40px;
+
+    }
+}
+@media (max-width: 1000px){
+    .brands{
+        padding: 10px 0px;
+        gap: 10px;
+        
+    }
+    .deal-brands-card {
+        min-width: 140px;
+        min-height: 70px;
+        margin: 0px 10px;
+    }
+    .deal-brands-card img {
+        width: 60px;
+        height: 60px;
+    }
+    .deal-brands-card p{
+        margin-top: -10px;
+    }
+    .offer-cards-container{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 750px){
+    .brands{
+        padding: 0px;
+        gap: 0px;
+        
+    }
+    .deal-brands-card {
+        min-width: 120px;
+        min-height: 70px;
+        margin: 0px 3px;
+        text-align: center;
+    }
+    .deal-brands-card img {
+        width: 60px;
+        height: 60px;
+    }
+    .deal-brands-card p{
+        margin-top: -10px;
+        font-size: 14px;
+    }
+    .deal-brands-card span{
+        font-size: 14px;
+    }
+}
+@media (max-width: 600px) {
+    .deals-hero{
+        padding: 100px 3% 80px 3%;
+    }
+    .brand-deals{
+        padding:60px 3%;
+    }
+    .offer-products{
+        width: 95%;
+    }
+}
+@media (max-width: 500px) {
+    .deals-description{
+        display: none;
+    }
+    .deals-stats{
+        gap: 15px;
+    }
+    .stat-box{
+        width: 110px;
+        min-width: 80px;
+        padding: 10px;
+    }
+    .stat-box h3{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .stat-box span{
+        font-size: 12px;
+    }
+}
+@media (max-width: 350px) {
+
+}
+
